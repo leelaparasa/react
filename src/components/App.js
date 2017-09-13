@@ -53,9 +53,7 @@ export default class App extends React.Component{
         return(
             <Grid fluid style={{backgroundColor: '#252525'}}>
 
-                {/*<MoviesList netflixData={netflixData} flag="mylist" />*/}
-                {/*<h2 style={{color: 'white'}}>Recommendations</h2>*/}
-                {/*<MoviesList netflixData={netflixData} flag="recommendations" />*/}
+              
                 <MoviesList />
             </Grid>
         )
