@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 export default class Movie extends React.Component{
@@ -10,7 +10,7 @@ export default class Movie extends React.Component{
             movieType: '',
             imgsrc: '',
             buttontext: ''
-        }
+        };
         this.ShowButton = this.ShowButton.bind(this);
         this.HideButton = this.HideButton.bind(this);
         this.buttonClickHandler = this.buttonClickHandler.bind(this);
@@ -30,13 +30,13 @@ export default class Movie extends React.Component{
         let movieObj = {
             movieItem : this.props.movieItem,
             movieType : this.props.movieType
-        }
+        };
         this.props.triggerParentUpdate(movieObj);
     }
 
 
     render(){
-        let button = <div style={{height: 40}}>&nbsp;&nbsp;</div>
+        let button = <div style={{height: 40}}>&nbsp;&nbsp;</div>;
         if(this.state.showButton)
             button = <div style={{height: 40}}><button id={this.props.id} onClick={this.buttonClickHandler}>{this.props.buttontext}</button></div>
         return(
@@ -52,4 +52,4 @@ export default class Movie extends React.Component{
 
 Movie.PropTypes = {
     triggerParentUpdate: PropTypes.func
-}
+};

@@ -42,7 +42,7 @@ export default class MoviesList extends React.Component {
                     }
                 ]
             }
-        }
+        };
         this.MovieHandler = this.MovieHandler.bind(this);
     }
     MovieHandler(movieObj){
@@ -65,8 +65,8 @@ export default class MoviesList extends React.Component {
         }
     }
     render(){
-        var netflixData = this.state.netflixData;
-        var self = this;
+        let netflixData = this.state.netflixData;
+        let self = this;
         return(
             <div>
                 <Row className="show-grid">

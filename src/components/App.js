@@ -2,7 +2,7 @@ import React from 'react';
 import MoviesList from './MoviesList';
 import { Grid } from 'react-bootstrap';
 
-var netflixData = {
+let netflixData = {
     "mylist": [
         {
             "title": "Futurama",
@@ -37,7 +37,7 @@ var netflixData = {
             "img": "http://cdn0.nflximg.net/webp/3200/9163200.webp"
         }
     ]
-}
+};
 
 export default class App extends React.Component{
 
@@ -52,12 +52,8 @@ export default class App extends React.Component{
     render(){
         return(
             <Grid fluid style={{backgroundColor: '#252525'}}>
-
-                {/*<MoviesList netflixData={netflixData} flag="mylist" />*/}
-                {/*<h2 style={{color: 'white'}}>Recommendations</h2>*/}
-                {/*<MoviesList netflixData={netflixData} flag="recommendations" />*/}
                 <MoviesList />
             </Grid>
         )
     }
-}
+};
