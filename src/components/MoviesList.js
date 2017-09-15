@@ -1,6 +1,5 @@
 import React from 'react';
-import {findDOMNode} from 'react-dom';
-import { Col, Row } from 'react-bootstrap';
+import {  Row } from 'react-bootstrap';
 import Movie from './Movie';
 
 export default class MoviesList extends React.Component {
@@ -53,18 +52,16 @@ export default class MoviesList extends React.Component {
             const newState = this.state.netflixData;
             if (newState.mylist.indexOf(movie) > -1) {
                 newState.mylist.splice(newState.mylist.indexOf(movie), 1);
+                let length = newState.recommendations.length;
+                newState.recommendations.splice(length, 0, movie);
                 this.setState({netflixData: newState});
             }
         }else{
             const newState = this.state.netflixData;
             let length = newState.mylist.length;
-            if (newState.mylist.indexOf(movie) > -1) {
-                alert("Movie already exists");
-            }
-            else{
-                newState.mylist.splice(length, 0, movie);
-                this.setState({netflixData: newState});
-            }
+            newState.mylist.splice(length, 0, movie);
+            newState.recommendations.splice(newState.recommendations.indexOf(movie), 1);
+            this.setState({netflixData: newState});
         }
     }
     render(){
